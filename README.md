@@ -1,17 +1,24 @@
-# SEMBA Inventory Management System 👕
+# SEMBA Inventory Management API
 
-A high-performance Backend API built with **FastAPI** and **SQLAlchemy** to manage inventory for the SEMBA clothing brand.
+A production-grade RESTful API built with **FastAPI** and **SQLAlchemy**
+for scalable clothing brand inventory management.
 
-## Features 🚀
+## Features
 
-- **Full CRUD Operations**: Create, Read, Update, and Delete products.
-- **Auto-Documentation**: Interactive API docs using Swagger UI.
-- **Database**: SQLite with SQLAlchemy ORM.
-- **Scalable Structure**: Organized into app/ directory for professional development.
+✓ Full CRUD Operations — Create, read, update, delete products
+✓ Real-time Inventory Tracking — Monitor stock levels automatically
+✓ RESTful Design — Clean, scalable API architecture
+✓ Auto-Documentation — Interactive Swagger UI at /docs
+✓ Data Validation — Pydantic models for type safety
+✓ SQLAlchemy ORM — Robust database operations
 
-## How to Run 🛠️
+## Tech Stack
 
-1. Create a virtual environment: `python -m venv venv`
-2. Activate it: `venv\Scripts\activate`
-3. Install requirements: `pip install -r requirements.txt`
-4. Start the server: `uvicorn app.main:app --reload`
+- **Framework:** FastAPI
+- **Database:** SQLAlchemy ORM + SQLite
+- **Validation:** Pydantic
+- **Documentation:** Swagger UI + ReDoc
+
+## API Endpoints
+
+### Products ده

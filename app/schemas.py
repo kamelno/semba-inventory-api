@@ -1,18 +1,26 @@
 from pydantic import BaseModel
+from typing import Optional
+from datetime import datetime
 
-# ده اللي بنستخدمه لما نيجي نبعت بيانات منتج جديد
-class ProductCreate(BaseModel):
+class ProductBase(BaseModel):
     name: str
+    sku: str
     price: float
     stock: int
-    color: str | None = None
+    color: Optional[str] = None
 
-# ده اللي الـ API بيرجعهولنا بعد ما المنتج يتسيف
-class Product(BaseModel):
+class ProductCreate(ProductBase):
+    pass
+
+class ProductUpdate(BaseModel):
+    name: Optional[str] = None
+    price: Optional[float] = None
+    stock: Optional[int] = None
+    color: Optional[str] = None
+
+class Product(ProductBase):
     id: int
-    name: str
-    price: float
-    stock: int
-    color: str | None = None
+    created_at: datetime
+
     class Config:
         from_attributes = True
